@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bias och den långa svansens problem med Teachable Machines</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-gradient: linear-gradient(135deg, #f6f8ff 0%, #fefefe 100%);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(119, 136, 153, 0.2);
+      --primary-color: #3f51b5;
+      --accent-color: #6c8cff;
+      --text-color: #1f2933;
+      --muted-text: #52606d;
+      --shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.18);
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px 80px;
+    }
+
+    .page-wrapper {
+      width: min(1080px, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px clamp(16px, 4vw, 48px);
+      border-radius: 28px;
+      background: radial-gradient(circle at top left, rgba(108, 140, 255, 0.12), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(63, 81, 181, 0.14), transparent 60%),
+        var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--primary-color);
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 600;
+      color: var(--muted-text);
+    }
+
+    .section-card {
+      border-radius: 24px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-header {
+      padding: 24px clamp(20px, 4vw, 32px);
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(108, 140, 255, 0.08);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--primary-color);
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      min-height: 600px;
+    }
+
+    .download {
+      padding: clamp(24px, 4vw, 36px);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .download p {
+      margin: 0;
+      color: var(--muted-text);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .download a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 12px 25px rgba(63, 81, 181, 0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .download a:hover,
+    .download a:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 30px rgba(63, 81, 181, 0.4);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 24px 12px 60px;
+      }
+
+      iframe {
+        min-height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1>Bias och den långa svansens problem med Teachable Machines</h1>
+      <h2>Min inlämning till: Uppgift kopplad till laborationerna (TIG 143) (Peter Nävert)</h2>
+    </header>
+
+    <section class="section-card">
+      <div class="section-header">Instruktioner</div>
+      <iframe src="https://docs.google.com/document/d/1msXpSFPfpKw2sSckqTPyAzbwc8c3KwTXFiFHxstY0tQ/preview"></iframe>
+    </section>
+
+    <section class="section-card">
+      <div class="download">
+        <p>Ladda ner datasetet för Teachable Machines: fladdermöss och kråkor.</p>
+        <a href="./Data%20till%20TM%20fladdermo%CC%88ss%20och%20kra%CC%8Akor.zip" download>Ladda ner datasetet</a>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <div class="section-header">Tanken bakom uppgiften</div>
+      <iframe src="https://docs.google.com/document/d/1pSR4Ptzr41Ce_-K5H5LGL9gB7H_kxz6nC75wwhsJIio/preview"></iframe>
+    </section>
+  </div>
+</body>
+</html>
